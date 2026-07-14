@@ -1,0 +1,62 @@
+---
+import '../styles/global.css';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Splash Sistemas",
+  "description": "Landing pages que convertem e sistemas sob medida para pequenas e médias empresas.",
+  "url": "https://splashsistemas.com.br",
+  "telephone": "+555182135882",
+  "email": "contato@splashsistemas.com.br",
+  "priceRange": "$$",
+  "areaServed": "Brasil",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Torres",
+    "addressRegion": "RS",
+    "addressCountry": "BR"
+  }
+};
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Splash Sistemas</title>
+    <meta name="description" content="Splash Sistemas: landing pages que convertem e sistemas personalizados para pequenas e médias empresas. Sem gambiarra, sem molde pronto. Fale conosco." />
+    <link rel="canonical" href="https://splashsistemas.com.br/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Splash Sistemas" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:url" content="https://splashsistemas.com.br/" />
+    <meta property="og:title" content="Splash Sistemas — Sites e Sistemas Sob Medida para PMEs" />
+    <meta property="og:description" content="Landing pages que convertem e sistemas sob medida para pequenas e médias empresas." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Splash Sistemas — Sites e Sistemas Sob Medida para PMEs" />
+    <meta name="twitter:description" content="Landing pages que convertem e sistemas sob medida para pequenas e médias empresas." />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    </noscript>
+
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
+  </head>
+  <body class="font-sans text-gray-800">
+    <slot />
+  </body>
+</html>
