@@ -1,4 +1,27 @@
 ---
+const cases = [
+  {
+    categoria: "Landing page",
+    nome: "Bastos & Ferreira",
+    descricao: "Escritório de advocacia em São Paulo. Site direto ao ponto, com foco em transformar visita em conversa no WhatsApp.",
+    url: "https://exemplo-plano-standard.vercel.app/",
+    img: "/portfolio/standard.jpg",
+  },
+  {
+    categoria: "Site institucional",
+    nome: "Vila Horizonte",
+    descricao: "Residencial sênior de alto padrão. Site institucional completo, com estrutura, depoimentos e agendamento de visita.",
+    url: "https://exemplo-plano-pro.vercel.app/",
+    img: "/portfolio/pro.jpg",
+  },
+  {
+    categoria: "Site + 1 Landing Page",
+    nome: "Éclat Estética Avançada",
+    descricao: "Clínica de estética em Torres, RS. Site com antes/depois, tratamentos e agendamento — pronto pra escalar com automação.",
+    url: "https://exemplo-plano-premium.vercel.app/",
+    img: "/portfolio/premium.jpg",
+  },
+];
 ---
 <section id="portfolio" class="bg-[oklch(97%_0.004_250)] px-6 py-20 md:px-12 md:py-[120px]">
   <div class="mx-auto max-w-[1240px]">
@@ -6,37 +29,36 @@
       <span class="text-[13px] font-bold uppercase tracking-[0.08em] text-primary">Trabalhos recentes</span>
       <h2 class="mt-3.5 font-display text-[28px] font-bold tracking-[-0.02em] text-[oklch(16%_0.02_250)] md:text-[38px]">Projetos que resolveram um problema de verdade.</h2>
     </div>
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-[1.3fr_1fr_1fr]">
-      <div class="hover-lift-card flex flex-col overflow-hidden rounded-[18px] border border-[oklch(90%_0.006_250)] bg-white shadow-[0_20px_40px_-24px_oklch(20%_0.02_250_/_0.15)] transition-all md:row-span-2" data-aos="fade-up">
-        <div class="flex h-[220px] items-center justify-center bg-[repeating-linear-gradient(135deg,oklch(94%_0.02_258),oklch(94%_0.02_258)_10px,oklch(91%_0.025_258)_10px,oklch(91%_0.025_258)_20px)]">
-          <span class="rounded-md border border-[oklch(88%_0.02_258)] bg-white px-3 py-1.5 font-mono text-xs text-[oklch(45%_0.05_258)]">print do projeto aqui</span>
-        </div>
-        <div class="p-7 pb-8">
-          <span class="text-xs font-bold uppercase tracking-[0.05em] text-primary">Landing page</span>
-          <h3 class="my-2 font-display text-xl font-bold text-[oklch(16%_0.02_250)]">Cliente exemplo — clínica odontológica</h3>
-          <p class="m-0 text-[14.5px] leading-[1.55] text-[oklch(42%_0.012_250)]">Site institucional zerado, sem presença no Google. Nova landing page trouxe agendamentos direto pelo WhatsApp e primeira página no Google em 3 meses.</p>
-        </div>
-      </div>
-      <div class="hover-lift-card overflow-hidden rounded-[18px] border border-[oklch(90%_0.006_250)] bg-white shadow-[0_20px_40px_-24px_oklch(20%_0.02_250_/_0.15)] transition-all" data-aos="fade-up" data-aos-delay="80">
-        <div class="flex h-[140px] items-center justify-center bg-[repeating-linear-gradient(135deg,oklch(94%_0.02_258),oklch(94%_0.02_258)_10px,oklch(91%_0.025_258)_10px,oklch(91%_0.025_258)_20px)]">
-          <span class="rounded-md border border-[oklch(88%_0.02_258)] bg-white px-2.5 py-[5px] font-mono text-[11px] text-[oklch(45%_0.05_258)]">print aqui</span>
-        </div>
-        <div class="p-6 pb-[26px]">
-          <span class="text-[11.5px] font-bold uppercase tracking-[0.05em] text-primary">Sistema sob medida</span>
-          <h3 class="my-[7px] font-display text-[17px] font-bold text-[oklch(16%_0.02_250)]">Cliente exemplo — distribuidora</h3>
-          <p class="m-0 text-[13.5px] leading-[1.5] text-[oklch(42%_0.012_250)]">Controle de pedidos que era feito em planilha virou sistema próprio, cortando horas de retrabalho por semana.</p>
-        </div>
-      </div>
-      <div class="hover-lift-card overflow-hidden rounded-[18px] border border-[oklch(90%_0.006_250)] bg-white shadow-[0_20px_40px_-24px_oklch(20%_0.02_250_/_0.15)] transition-all" data-aos="fade-up" data-aos-delay="160">
-        <div class="flex h-[140px] items-center justify-center bg-[repeating-linear-gradient(135deg,oklch(94%_0.02_258),oklch(94%_0.02_258)_10px,oklch(91%_0.025_258)_10px,oklch(91%_0.025_258)_20px)]">
-          <span class="rounded-md border border-[oklch(88%_0.02_258)] bg-white px-2.5 py-[5px] font-mono text-[11px] text-[oklch(45%_0.05_258)]">print aqui</span>
-        </div>
-        <div class="p-6 pb-[26px]">
-          <span class="text-[11.5px] font-bold uppercase tracking-[0.05em] text-primary">Landing page</span>
-          <h3 class="my-[7px] font-display text-[17px] font-bold text-[oklch(16%_0.02_250)]">Cliente exemplo — estúdio de arquitetura</h3>
-          <p class="m-0 text-[13.5px] leading-[1.5] text-[oklch(42%_0.012_250)]">Portfólio online substituindo o Instagram como única vitrine, com formulário de contato direto.</p>
-        </div>
-      </div>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      {cases.map((c, i) => (
+        <a
+          href={c.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover-lift-card group flex flex-col overflow-hidden rounded-[18px] border border-[oklch(90%_0.006_250)] bg-white shadow-[0_20px_40px_-24px_oklch(20%_0.02_250_/_0.15)] transition-all"
+          data-aos="fade-up"
+          data-aos-delay={i * 80}
+        >
+          <div class="flex items-center gap-[7px] border-b border-[oklch(93%_0.006_250)] bg-[oklch(97%_0.004_250)] px-[18px] py-[14px]">
+            <span class="h-[9px] w-[9px] rounded-full bg-[oklch(75%_0.1_30)]"></span>
+            <span class="h-[9px] w-[9px] rounded-full bg-[oklch(80%_0.12_90)]"></span>
+            <span class="h-[9px] w-[9px] rounded-full bg-[oklch(75%_0.13_145)]"></span>
+            <div class="ml-3.5 truncate rounded-md border border-[oklch(90%_0.006_250)] bg-white px-3 py-1 font-mono text-[11px] text-[oklch(55%_0.01_250)]">{c.url.replace('https://', '')}</div>
+          </div>
+          <div class="h-[170px] overflow-hidden">
+            <img src={c.img} alt={c.nome} class="h-full w-full object-cover object-top" loading="lazy" />
+          </div>
+          <div class="flex flex-1 flex-col p-7 pb-8">
+            <span class="text-xs font-bold uppercase tracking-[0.05em] text-primary">{c.categoria}</span>
+            <h3 class="my-2 font-display text-lg font-bold text-[oklch(16%_0.02_250)]">{c.nome}</h3>
+            <p class="m-0 flex-1 text-[14.5px] leading-[1.55] text-[oklch(42%_0.012_250)]">{c.descricao}</p>
+            <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-[oklch(18%_0.02_250)] group-hover:text-primary">
+              Visitar site
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" class="transition-transform group-hover:translate-x-0.5"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </div>
+        </a>
+      ))}
     </div>
   </div>
 </section>
