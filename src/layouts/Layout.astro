@@ -5,17 +5,39 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Splash Sistemas",
-  "description": "Landing pages que convertem e sistemas sob medida para pequenas e médias empresas.",
+  "description": "Sites e sistemas sob medida para pequenas e médias empresas em Torres, RS e região.",
   "url": "https://splashsistemas.com.br",
   "telephone": "+555182135882",
   "email": "contato@splashsistemas.com.br",
   "priceRange": "$$",
-  "areaServed": "Brasil",
+  "image": "https://splashsistemas.com.br/og-image.png",
+  "sameAs": [
+    "https://www.instagram.com/splash.sistemas/"
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Torres",
     "addressRegion": "RS",
     "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -29.3336,
+    "longitude": -49.7264
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Torres" },
+    { "@type": "State", "name": "Rio Grande do Sul" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços Splash Sistemas",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Criação de Sites", "areaServed": "Torres, RS" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Landing Pages", "areaServed": "Torres, RS" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sistemas Personalizados", "areaServed": "Torres, RS" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desenvolvimento de Software sob Medida", "areaServed": "Torres, RS" } }
+    ]
   }
 };
 ---
@@ -25,20 +47,22 @@ const schema = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Splash Sistemas</title>
-    <meta name="description" content="Splash Sistemas: landing pages que convertem e sistemas personalizados para pequenas e médias empresas. Sem gambiarra, sem molde pronto. Fale conosco." />
+    <title>Splash Sistemas | Sites, Sistemas e Landing Pages em Torres, RS</title>
+    <meta name="description" content="Desenvolvemos sites, landing pages e software sob medida para pequenas e médias empresas em Torres, RS e região. Sem gambiarra, sem molde pronto." />
     <link rel="canonical" href="https://splashsistemas.com.br/" />
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Splash Sistemas" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:url" content="https://splashsistemas.com.br/" />
-    <meta property="og:title" content="Splash Sistemas — Sites e Sistemas Sob Medida para PMEs" />
-    <meta property="og:description" content="Landing pages que convertem e sistemas sob medida para pequenas e médias empresas." />
+    <meta property="og:title" content="Splash Sistemas | Sites, Sistemas e Landing Pages em Torres, RS" />
+    <meta property="og:description" content="Desenvolvemos sites, landing pages e software sob medida para pequenas e médias empresas em Torres, RS e região." />
+    <meta property="og:image" content="https://splashsistemas.com.br/og-image.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Splash Sistemas — Sites e Sistemas Sob Medida para PMEs" />
-    <meta name="twitter:description" content="Landing pages que convertem e sistemas sob medida para pequenas e médias empresas." />
+    <meta name="twitter:title" content="Splash Sistemas | Sites, Sistemas e Landing Pages em Torres, RS" />
+    <meta name="twitter:description" content="Desenvolvemos sites, landing pages e software sob medida para pequenas e médias empresas em Torres, RS e região." />
+    <meta name="twitter:image" content="https://splashsistemas.com.br/og-image.png" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
